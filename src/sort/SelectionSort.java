@@ -4,23 +4,22 @@ import java.util.Arrays;
 
 public class SelectionSort {
     public int[] sort(int[] nums) {
-        if(nums == null || nums.length == 0)
-            return new int[]{};
-
-        if(nums.length == 1)
+        // No need to compute empty arrays
+        if(nums == null || nums.length <= 1)
             return nums;
 
         for (int i = nums.length - 1; i > 0; i--) {
-            int biggestNumberIndex = 0;
+            // The largest element is the last element on the list, specially after first pass
+            int largestIndex = i;
             for (int j = 0; j <= i; j++) {
-                if (nums[j] > nums[biggestNumberIndex]) {
-                    biggestNumberIndex = j;
+                if (nums[j] > nums[largestIndex]) {
+                    largestIndex = j;
                 }
             }
 
             int temp = nums[i];
-            nums[i] = nums[biggestNumberIndex];
-            nums[biggestNumberIndex] = temp;
+            nums[i] = nums[largestIndex];
+            nums[largestIndex] = temp;
         }
 
         return nums;
