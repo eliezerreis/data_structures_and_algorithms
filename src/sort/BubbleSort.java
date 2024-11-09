@@ -4,15 +4,14 @@ import java.util.Arrays;
 
 public class BubbleSort {
     public int[] sort(int[] nums) {
-        if(nums == null || nums.length == 0)
-            return new int[]{};
-
-        if(nums.length == 1)
+        // No need to sort an empty array
+        if(nums == null || nums.length <= 1)
             return nums;
 
         for (int i = 0; i < nums.length; i++) {
-            for (int j = 0; j < nums.length - i; j++) {
-                if (j < nums.length - 1 && nums[j] > nums[j + 1]) {
+            // The last ith element is already sorted
+            for (int j = 0; j < nums.length - i -1; j++) {
+                if (nums[j] > nums[j + 1]) {
                     int temp = nums[j];
                     nums[j] = nums[j + 1];
                     nums[j + 1] = temp;
