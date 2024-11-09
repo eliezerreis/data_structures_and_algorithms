@@ -10,17 +10,17 @@ public class SelectionSort {
         if(nums.length == 1)
             return nums;
 
-        for (int i = nums.length - 1; i >= 0; i--) {
-            int biggestIndex = 0;
+        for (int i = nums.length - 1; i > 0; i--) {
+            int biggestNumberIndex = 0;
             for (int j = 0; j <= i; j++) {
-                if (nums[biggestIndex] < nums[j]) {
-                    biggestIndex = j;
+                if (nums[j] > nums[biggestNumberIndex]) {
+                    biggestNumberIndex = j;
                 }
             }
 
             int temp = nums[i];
-            nums[i] = nums[biggestIndex];
-            nums[biggestIndex] = temp;
+            nums[i] = nums[biggestNumberIndex];
+            nums[biggestNumberIndex] = temp;
         }
 
         return nums;

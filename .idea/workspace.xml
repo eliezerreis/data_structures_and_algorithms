@@ -5,8 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bc55e55f-becb-4f53-8fd8-d9e491ec797d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/sort/SelectionSort.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sort/SelectionSort.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sort/SelectionSort.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,22 +56,11 @@
       <option name="presentableId" value="Default" />
       <updated>1731108744528</updated>
       <workItem from="1731108745549" duration="338000" />
-      <workItem from="1731109132483" duration="4633000" />
+      <workItem from="1731109132483" duration="4947000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/sort/SelectionSort.java</url>
-          <line>12</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>
