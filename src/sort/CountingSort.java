@@ -24,7 +24,6 @@ public class CountingSort {
 
     public static void main(String[] args) {
 
-
         CountingSort sorter = new CountingSort();
         int[] nums = {20, 35, -15, 7, 55, 1, -22};
         //int[] nums = {8, 2, 1, 3, 9, 4, 7, 6, 5};
