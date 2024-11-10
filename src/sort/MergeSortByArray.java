@@ -47,15 +47,12 @@ public class MergeSortByArray {
 
     public static void main(String[] args) {
         MergeSortByArray selection = new MergeSortByArray();
-        int[] nums = new int[]{20, 35, -15, 7, 55, 1, -22};
-        //int[] nums = new int[]{0, 1, 2, 3, 4, 5, 6};
-        nums = selection.sort(nums);
 
-        System.out.println(Arrays.toString(nums));
-//        System.out.println(Arrays.toString(selection.sort(new int[]{9, 9, 9, 9})));
-//        System.out.println(Arrays.toString(selection.sort(null)));
-//        System.out.println(Arrays.toString(selection.sort(new int[]{})));
-//        System.out.println(Arrays.toString(selection.sort(new int[]{1})));
+        System.out.println(Arrays.toString(selection.sort(new int[]{20, 35, -15, 7, 55, 1, -22})));
+        System.out.println(Arrays.toString(selection.sort(new int[]{9, 9, 9, 9})));
+        System.out.println(Arrays.toString(selection.sort(null)));
+        System.out.println(Arrays.toString(selection.sort(new int[]{})));
+        System.out.println(Arrays.toString(selection.sort(new int[]{1})));
     }
 
 }
