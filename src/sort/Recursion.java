@@ -15,17 +15,17 @@ public class Recursion {
         int i = fibonacci(num - 1);
         int j = fibonacci(num - 2);
 
-        return  i+j;
+        return i + j;
     }
 
     public static void main(String[] args) {
         int number = 4;
-Recursion.fibonacci(5);
+        Recursion.fibonacci(5);
         System.out.println(number + "! = " + Recursion.factorial(4));
 
         System.out.print("Fibonacci Sequence of " + number + " = ");
         for (int i = 0; i < number; i++) {
-            System.out.print(" "+Recursion.fibonacci(i));
+            System.out.print(" " + Recursion.fibonacci(i));
         }
         System.out.println();
     }
