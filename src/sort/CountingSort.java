@@ -8,8 +8,8 @@ public class CountingSort {
         int[] counter = new int[max - min + 1];
 
         // count the number of occurrences of each number and place in the correct place in the array
-        for (int i = 0; i < nums.length; i++) {
-            int position = nums[i] - min;
+        for (int num : nums) {
+            int position = num - min;
             counter[position]++;
         }
 
