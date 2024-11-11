@@ -1,4 +1,4 @@
-package lists.entities;
+package entities;
 
 public class Employee {
 

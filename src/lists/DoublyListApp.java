@@ -1,6 +1,6 @@
 package lists;
 
-import lists.entities.Employee;
+import entities.Employee;
 import lists.linked.EmployeeDoublyLinkedList;
 
 public class DoublyListApp {

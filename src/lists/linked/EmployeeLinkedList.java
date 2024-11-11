@@ -1,11 +1,10 @@
 package lists.linked;
 
-import lists.entities.Employee;
+import entities.Employee;
 
 public class EmployeeLinkedList {
     private EmployeeNode head;
     private int size;
-    private boolean empty;
 
     public void addToFront(Employee employee) {
         EmployeeNode node = new EmployeeNode(employee);
