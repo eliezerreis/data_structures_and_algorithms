@@ -1,11 +1,13 @@
-package lists;
+package lists.linked;
+
+import lists.entities.Employee;
 
 public class EmployeeLinkedList {
     private EmployeeNode head;
     private int size;
     private boolean empty;
 
-    void addToFront(Employee employee) {
+    public void addToFront(Employee employee) {
         EmployeeNode node = new EmployeeNode(employee);
         node.setNext(head);
         head = node;
@@ -13,20 +15,17 @@ public class EmployeeLinkedList {
         size++;
     }
 
-    Employee removeFromFront() {
-        if (isEmpty())
-            return null;
+    public void removeFromFront() {
+        if (isEmpty()) return;
 
         EmployeeNode node = head;
         head = head.getNext();
         size--;
 
         node.setNext(null);
-        return node.getEmployee();
     }
 
-
-    void printList() {
+    public void printList() {
         EmployeeNode current = head;
         while (current != null) {
             System.out.println(current.getEmployee());

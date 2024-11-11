@@ -1,4 +1,6 @@
-package lists;
+package lists.linked;
+
+import lists.entities.Employee;
 
 public class EmployeeNode {
     private Employee employee;

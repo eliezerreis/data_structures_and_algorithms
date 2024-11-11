@@ -1,6 +1,7 @@
 package lists;
 
-import java.util.*;
+import lists.entities.Employee;
+import lists.linked.EmployeeLinkedList;
 
 public class SinglyListApp {
     /**
