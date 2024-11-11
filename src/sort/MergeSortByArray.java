@@ -10,12 +10,15 @@ public class MergeSortByArray {
         int k = 0;
         int[] mix = new int[first.length + second.length];
 
+        // Merge both arrays
         while (i < first.length && j < second.length)
             mix[k++] = first[i] < second[j] ? first[i++] : second[j++];
 
+        // Merge remaining elements in the first array
         while (i < first.length)
             mix[k++] = first[i++];
 
+        // Merge remaining elements in the second array
         while (j < second.length)
             mix[k++] = second[j++];
 
