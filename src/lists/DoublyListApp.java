@@ -1,9 +1,9 @@
 package lists;
 
 import lists.entities.Employee;
-import lists.linked.EmployeeLinkedList;
+import lists.linked.EmployeeDoublyLinkedList;
 
-public class SinglyListApp {
+public class DoublyListApp {
     /**
      * Pros:
      * 1) Very good when you have to insert elements in the front of the list
@@ -19,18 +19,23 @@ public class SinglyListApp {
         Employee e5 = new Employee(4, "Mike", "Wilson");
 
 
-        EmployeeLinkedList linkedList = new EmployeeLinkedList();
+        EmployeeDoublyLinkedList linkedList = new EmployeeDoublyLinkedList();
         linkedList.addToFront(e1);
         linkedList.addToFront(e2);
         linkedList.addToFront(e3);
-        linkedList.addToFront(e4);
-        linkedList.addToFront(e5);
+        linkedList.addToBack(e4);
+        linkedList.addToBack(e5);
 
         linkedList.printList();
         System.out.println("Is the list empty? " + linkedList.isEmpty());
         System.out.println("Size of the list: " + linkedList.getSize());
 
+        System.out.println("Remove to the front");
         linkedList.removeFromFront();
+        linkedList.printList();
+
+        System.out.println("Remove to the back");
+        linkedList.removeFromBack();
         linkedList.printList();
 
     }
