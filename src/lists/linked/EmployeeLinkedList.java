@@ -14,14 +14,16 @@ public class EmployeeLinkedList {
         size++;
     }
 
-    public void removeFromFront() {
-        if (isEmpty()) return;
+    public Employee removeFromFront() {
+        if (isEmpty()) return null;
 
         EmployeeNode node = head;
         head = head.getNext();
         size--;
 
         node.setNext(null);
+
+        return node.getEmployee();
     }
 
     public void printList() {
@@ -39,5 +41,9 @@ public class EmployeeLinkedList {
 
     public boolean isEmpty() {
         return head == null;
+    }
+
+    public EmployeeNode getHead() {
+        return head;
     }
 }

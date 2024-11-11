@@ -2,8 +2,9 @@ package stacks;
 
 import entities.Employee;
 import stacks.stack.EmployeeArrayStack;
+import stacks.stack.EmployeeLinkedStack;
 
-public class StackArrayApp {
+public class StackLinkedListApp {
     public static void main(String[] args) {
         Employee jane = new Employee(0, "Jane", "Doe");
         Employee john = new Employee(1, "John", "Doe");
@@ -11,7 +12,7 @@ public class StackArrayApp {
         Employee luci = new Employee(3, "Luci", "Jones");
         Employee mike = new Employee(4, "Mike", "Wilson");
 
-        EmployeeArrayStack stack = new EmployeeArrayStack(2);
+        EmployeeLinkedStack stack = new EmployeeLinkedStack();
         stack.push(jane);
         stack.push(john);
         stack.push(mary);
