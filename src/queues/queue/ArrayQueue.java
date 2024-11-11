@@ -2,7 +2,6 @@ package queues.queue;
 
 import entities.Employee;
 
-import java.util.EmptyStackException;
 import java.util.NoSuchElementException;
 
 public class ArrayQueue {
@@ -10,7 +9,7 @@ public class ArrayQueue {
     private int back;
     private int front;
 
-    private int capacity;
+    private final int capacity;
 
     public ArrayQueue(int capacity) {
         this.capacity = capacity;
@@ -19,11 +18,9 @@ public class ArrayQueue {
 
     public void add(Employee employee) {
         if (back == queue.length) {
-            Employee[] newStack = new Employee[capacity * 2];
-            System.arraycopy(queue, 0, newStack, 0, capacity);
-
-            queue = newStack;
-            capacity *= 2;
+            Employee[] newQueue = new Employee[queue.length * 2];
+            System.arraycopy(queue, 0, newQueue, 0, queue.length);
+            queue = newQueue;
         }
 
         queue[back++] = employee;
@@ -31,7 +28,6 @@ public class ArrayQueue {
 
     public Employee remove() {
         Employee employee = peek();
-        back--;
         front++;
 
         //If we remove the only item in the queue
@@ -55,7 +51,6 @@ public class ArrayQueue {
     public int size() {
         return back - front;
     }
-
 
     public void print() {
         for (int i = front; i < back; i++) {

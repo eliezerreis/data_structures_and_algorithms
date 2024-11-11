@@ -2,8 +2,9 @@ package queues;
 
 import entities.Employee;
 import queues.queue.ArrayQueue;
+import queues.queue.CircularQueue;
 
-public class ArrayQueueApp {
+public class CircularQueueApp {
     public static void main(String[] args) {
         Employee jane = new Employee(0, "Jane", "Doe");
         Employee john = new Employee(1, "John", "Doe");
@@ -11,20 +12,17 @@ public class ArrayQueueApp {
         Employee luci = new Employee(3, "Luci", "Jones");
         Employee mike = new Employee(4, "Mike", "Wilson");
 
-        ArrayQueue queue = new ArrayQueue(2);
+        CircularQueue queue = new CircularQueue(2);
         queue.add(jane);
         queue.add(john);
-        queue.add(mary);
-        queue.add(luci);
-        queue.add(mike);
-
-        queue.print();
-
         queue.remove();
-        queue.print();
-
-        Employee e = queue.peek();
-        System.out.println("Retrieved Employee: " + e);
+        queue.add(mary);
+        queue.remove();
+        queue.add(luci);
+        queue.remove();
+        queue.remove();
+        queue.add(mike);
+        queue.remove();
 
         queue.print();
     }
