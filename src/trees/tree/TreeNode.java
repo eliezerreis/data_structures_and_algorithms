@@ -23,11 +23,29 @@ public class TreeNode {
     }
 
     public void transverseInOrder() {
-        if (left != null) left.transverseInOrder();
+        if (left != null)
+            left.transverseInOrder();
 
         System.out.print(data + " ");
 
-        if (right != null) right.transverseInOrder();
+        if (right != null)
+            right.transverseInOrder();
+    }
+
+    public void transversePreOrder() {
+        System.out.print(data + " ");
+        if (left != null)
+            left.transversePreOrder();
+        if (right != null)
+            right.transversePreOrder();
+    }
+
+    public void transversePosOrder() {
+        if (left != null)
+            left.transversePreOrder();
+        if (right != null)
+            right.transversePreOrder();
+        System.out.print(data + " ");
     }
 
     public TreeNode get(int value) {

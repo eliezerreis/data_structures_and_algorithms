@@ -20,6 +20,12 @@ public class BinarySearchTreeApp {
         tree.transverseInOrder();
 
         System.out.println();
+        tree.transversePreOrder();
+
+        System.out.println();
+        tree.transversePosOrder();
+
+        System.out.println();
         System.out.println("Get:" + tree.get(-15));
         System.out.println("Get:" + tree.get(22));
         System.out.println("Get:" + tree.get(1));
@@ -28,7 +34,7 @@ public class BinarySearchTreeApp {
         System.out.println("Min:" + tree.min());
         System.out.println("Max:" + tree.max());
 
-        System.out.println("");
+        System.out.println();
         tree.delete(-22);
         tree.delete(-15);
         tree.delete(7);

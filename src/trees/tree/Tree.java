@@ -18,6 +18,17 @@ public class Tree {
 
     }
 
+    public void transversePreOrder() {
+        if (root != null)
+            root.transversePreOrder();
+    }
+
+    public void transversePosOrder() {
+        if (root != null)
+            root.transversePosOrder();
+    }
+
+
     public TreeNode get(int value) {
         if (root != null)
             return root.get(value);
