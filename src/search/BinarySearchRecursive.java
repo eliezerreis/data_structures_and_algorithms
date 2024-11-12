@@ -42,14 +42,14 @@ public class BinarySearchRecursive {
 
     // Binary search needs a sorted array
     private int binarySearch(int[] nums, int target, int left, int right) {
-        if (left > right) return -1;
+        if (left >= right) return -1;
 
-        int middle = left + (right - left) / 2;
+        int middle = (left + right) / 2;
 
         if (nums[middle] == target) return middle;
 
         if (nums[middle] > target) {
-            return binarySearch(nums, target, left, middle - 1);
+            return binarySearch(nums, target, left, middle);
         } else {
             return binarySearch(nums, target, middle + 1, right);
         }
@@ -71,7 +71,7 @@ public class BinarySearchRecursive {
         nums = finder.sort(nums);
         System.out.println(Arrays.toString(nums));
 
-        System.out.println("#10 found at index:" + finder.searchFor(nums, 10));
+        System.out.println("#10 found at index: " + finder.searchFor(nums, 10));
         System.out.println("#20 found at index: " + finder.searchFor(nums, 20));
         System.out.println("#1 found at index: " + finder.searchFor(nums, 1));
         System.out.println("#7 found at index: " + finder.searchFor(nums, 7));
