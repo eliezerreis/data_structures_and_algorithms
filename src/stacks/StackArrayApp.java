@@ -1,7 +1,7 @@
 package stacks;
 
 import entities.Employee;
-import stacks.stack.EmployeeArrayStack;
+import stacks.util.EmployeeArrayStack;
 
 public class StackArrayApp {
     public static void main(String[] args) {

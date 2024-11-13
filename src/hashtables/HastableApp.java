@@ -1,7 +1,7 @@
 package hashtables;
 
 import entities.Employee;
-import hashtables.hashtable.SimpleHashtable;
+import hashtables.util.SimpleHashtable;
 
 public class HastableApp {
     public static void main(String[] args) {

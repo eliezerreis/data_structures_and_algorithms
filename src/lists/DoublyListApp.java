@@ -1,7 +1,7 @@
 package lists;
 
 import entities.Employee;
-import lists.linked.EmployeeDoublyLinkedList;
+import lists.util.EmployeeDoublyLinkedList;
 
 public class DoublyListApp {
     /**

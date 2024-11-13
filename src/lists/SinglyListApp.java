@@ -1,7 +1,7 @@
 package lists;
 
 import entities.Employee;
-import lists.linked.EmployeeLinkedList;
+import lists.util.EmployeeLinkedList;
 
 public class SinglyListApp {
     /**

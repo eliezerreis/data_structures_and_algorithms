@@ -1,8 +1,7 @@
 package stacks;
 
 import entities.Employee;
-import stacks.stack.EmployeeArrayStack;
-import stacks.stack.EmployeeLinkedStack;
+import stacks.util.EmployeeLinkedStack;
 
 public class StackLinkedListApp {
     public static void main(String[] args) {

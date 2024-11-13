@@ -1,4 +1,4 @@
-package queues.queue;
+package queues.util;
 
 import entities.Employee;
 

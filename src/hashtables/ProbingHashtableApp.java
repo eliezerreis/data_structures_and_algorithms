@@ -1,7 +1,7 @@
 package hashtables;
 
 import entities.Employee;
-import hashtables.hashtable.ProbingHashtable;
+import hashtables.util.ProbingHashtable;
 
 public class ProbingHashtableApp {
     public static void main(String[] args) {

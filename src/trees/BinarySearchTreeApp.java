@@ -1,6 +1,6 @@
 package trees;
 
-import trees.tree.Tree;
+import trees.util.Tree;
 
 public class BinarySearchTreeApp {
 

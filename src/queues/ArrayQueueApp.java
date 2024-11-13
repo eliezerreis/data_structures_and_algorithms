@@ -1,7 +1,7 @@
 package queues;
 
 import entities.Employee;
-import queues.queue.ArrayQueue;
+import queues.util.ArrayQueue;
 
 public class ArrayQueueApp {
     public static void main(String[] args) {

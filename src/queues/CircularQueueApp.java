@@ -1,8 +1,7 @@
 package queues;
 
 import entities.Employee;
-import queues.queue.ArrayQueue;
-import queues.queue.CircularQueue;
+import queues.util.CircularQueue;
 
 public class CircularQueueApp {
     public static void main(String[] args) {

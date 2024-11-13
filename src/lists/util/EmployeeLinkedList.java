@@ -1,4 +1,4 @@
-package lists.linked;
+package lists.util;
 
 import entities.Employee;
 

@@ -1,9 +1,7 @@
-package stacks.stack;
+package stacks.util;
 
 import entities.Employee;
-import lists.linked.EmployeeLinkedList;
-
-import java.util.EmptyStackException;
+import lists.util.EmployeeLinkedList;
 
 public class EmployeeLinkedStack {
     private final EmployeeLinkedList stack;

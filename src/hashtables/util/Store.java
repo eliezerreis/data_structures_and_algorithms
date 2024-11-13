@@ -1,4 +1,4 @@
-package hashtables.hashtable;
+package hashtables.util;
 
 import entities.Employee;
 
