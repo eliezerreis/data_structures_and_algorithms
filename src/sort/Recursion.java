@@ -18,6 +18,17 @@ public class Recursion {
         return i + j;
     }
 
+    public static void fn(int i) {
+        if (i > 3) {
+            return;
+        }
+
+        System.out.println(i);
+        fn(i + 1);
+
+        System.out.println("End of call where i = " + i);
+    }
+
     public static void main(String[] args) {
         int number = 4;
         Recursion.fibonacci(5);
@@ -28,6 +39,8 @@ public class Recursion {
             System.out.print(" " + Recursion.fibonacci(i));
         }
         System.out.println();
+
+        fn(1);
     }
 
 }
