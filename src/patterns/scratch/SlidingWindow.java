@@ -1,4 +1,4 @@
-package patterns;
+package patterns.scratch;
 
 public class SlidingWindow {
 
