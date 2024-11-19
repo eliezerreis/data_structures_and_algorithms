@@ -1,12 +1,12 @@
 package trees.util;
 
-public class Tree {
+public class BinaryTree {
 
-    public TreeNode root;
+    public BinaryNode root;
 
     public void insert(int value) {
         if (root == null)
-            root = new TreeNode(value);
+            root = new BinaryNode(value);
         else
             root.insert(value);
     }
@@ -28,7 +28,7 @@ public class Tree {
     }
 
 
-    public TreeNode get(int value) {
+    public BinaryNode get(int value) {
         if (root != null)
             return root.get(value);
 
@@ -53,7 +53,7 @@ public class Tree {
         root = delete(root, value);
     }
 
-    private TreeNode delete(TreeNode node, int value) {
+    private BinaryNode delete(BinaryNode node, int value) {
         if (node == null) return null;
 
         if (value < node.getData()) {

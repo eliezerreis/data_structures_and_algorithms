@@ -1,5 +1,8 @@
 package patterns.tree;
 
+import trees.util.SimpleTree;
+import trees.util.TreeNode;
+
 import java.util.LinkedList;
 import java.util.Queue;
 
@@ -43,45 +46,15 @@ public class DFSApp {
     public static void main(String[] args) {
         DFSApp app = new DFSApp();
         Integer[] arr1 = {3, 9, 20, null, null, 15, 7};
-        Integer[] arr2 = {8,3,10,1,6,null,14,null,null,4,7,13};
+        Integer[] arr2 = {8, 3, 10, 1, 6, null, 14, null, null, 4, 7, 13};
 
-        TreeNode root1 = createTree(arr1);
-        TreeNode root2 = createTree(arr2);
+        TreeNode root1 = SimpleTree.createTree(arr1);
+        TreeNode root2 = SimpleTree.createTree(arr2);
 
         System.out.println(app.smallestPath(root1));
         System.out.println(app.maxAncestorDiff(root2));
     }
 
-    public static TreeNode createTree(Integer[] arr) {
-        if (arr == null || arr.length == 0) {
-            return null;
-        }
 
-        TreeNode root = new TreeNode(arr[0]);
-        Queue<TreeNode> queue = new LinkedList<>();
-        queue.add(root);
-
-        int index = 1;
-        while (index < arr.length) {
-            TreeNode current = queue.poll();
-
-            // Left child
-            if (arr[index] != null) {
-                current.left = new TreeNode(arr[index]);
-                queue.add(current.left);
-            }
-            index++;
-
-            // Right child
-            if (index < arr.length && arr[index] != null) {
-                current.right = new TreeNode(arr[index]);
-                queue.add(current.right);
-            }
-            index++;
-        }
-
-        return root;
-
-    }
 
 }

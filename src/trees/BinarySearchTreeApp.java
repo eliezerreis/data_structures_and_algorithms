@@ -1,11 +1,11 @@
 package trees;
 
-import trees.util.Tree;
+import trees.util.BinaryTree;
 
 public class BinarySearchTreeApp {
 
-    public Tree create(int[] nums) {
-        Tree tree = new Tree();
+    public BinaryTree create(int[] nums) {
+        BinaryTree tree = new BinaryTree();
         for (int i = 0; i < nums.length; i++) {
             tree.insert(nums[i]);
         }
@@ -16,7 +16,7 @@ public class BinarySearchTreeApp {
         BinarySearchTreeApp binaryTree = new BinarySearchTreeApp();
         var nums = new int[]{20, 35, -15, 7, 55, -22, 1};
 
-        Tree tree = binaryTree.create(nums);
+        BinaryTree tree = binaryTree.create(nums);
         tree.transverseInOrder();
 
         System.out.println();

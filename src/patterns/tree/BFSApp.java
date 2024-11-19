@@ -1,5 +1,8 @@
 package patterns.tree;
 
+import trees.util.SimpleTree;
+import trees.util.TreeNode;
+
 import java.util.*;
 
 public class BFSApp {
@@ -86,9 +89,9 @@ public class BFSApp {
         Integer[] arr2 = {50, null, 54, 98, 6, null, null, null, 34};
         Integer[] arr3 = {1, 2, 3, 4, 5, 6, 7, 8, 9};
 
-        TreeNode root1 = createTree(arr1);
-        TreeNode root2 = createTree(arr2);
-        TreeNode root3 = createTree(arr3);
+        TreeNode root1 = SimpleTree.createTree(arr1);
+        TreeNode root2 = SimpleTree.createTree(arr2);
+        TreeNode root3 = SimpleTree.createTree(arr3);
         List<List<Integer>> zigZag = app.zigzagLevelOrder(root3);
 
         System.out.println(Arrays.toString(app.largestEachRow(root1))); //1,3,9
@@ -97,39 +100,6 @@ public class BFSApp {
         for (List<Integer> items : zigZag) {
             System.out.print(items);
         }
-
-    }
-
-
-    public static TreeNode createTree(Integer[] arr) {
-        if (arr == null || arr.length == 0) {
-            return null;
-        }
-
-        TreeNode root = new TreeNode(arr[0]);
-        Queue<TreeNode> queue = new LinkedList<>();
-        queue.add(root);
-
-        int index = 1;
-        while (index < arr.length) {
-            TreeNode current = queue.poll();
-
-            // Left child
-            if (arr[index] != null) {
-                current.left = new TreeNode(arr[index]);
-                queue.add(current.left);
-            }
-            index++;
-
-            // Right child
-            if (index < arr.length && arr[index] != null) {
-                current.right = new TreeNode(arr[index]);
-                queue.add(current.right);
-            }
-            index++;
-        }
-
-        return root;
 
     }
 }
