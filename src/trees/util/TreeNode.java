@@ -9,15 +9,21 @@ public class TreeNode {
         this.data = data;
     }
 
+
     public void insert(int value) {
-        if (value == data) return;
+        if (value == data)
+            return;
 
         if (value < data) {
-            if (left == null) left = new TreeNode(value);
-            else left.insert(value);
+            if (left == null)
+                left = new TreeNode(value);
+            else
+                left.insert(value);
         } else {
-            if (right == null) right = new TreeNode(value);
-            else right.insert(value);
+            if (right == null)
+                right = new TreeNode(value);
+            else
+                right.insert(value);
         }
 
     }

@@ -2,8 +2,7 @@ package trees.util;
 
 public class Tree {
 
-    private TreeNode root;
-
+    public TreeNode root;
 
     public void insert(int value) {
         if (root == null)
