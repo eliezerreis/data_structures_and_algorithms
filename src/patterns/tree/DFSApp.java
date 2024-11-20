@@ -3,9 +3,6 @@ package patterns.tree;
 import trees.util.SimpleTree;
 import trees.util.TreeNode;
 
-import java.util.LinkedList;
-import java.util.Queue;
-
 public class DFSApp {
     public int smallestPath(TreeNode node) {
         if (node == null)

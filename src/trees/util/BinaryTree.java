@@ -4,6 +4,14 @@ public class BinaryTree {
 
     public BinaryNode root;
 
+    public static BinaryTree createTree(int[] nums) {
+        BinaryTree tree = new BinaryTree();
+        for (int num : nums) {
+            tree.insert(num);
+        }
+        return tree;
+    }
+
     public void insert(int value) {
         if (root == null)
             root = new BinaryNode(value);
@@ -56,9 +64,9 @@ public class BinaryTree {
     private BinaryNode delete(BinaryNode node, int value) {
         if (node == null) return null;
 
-        if (value < node.getData()) {
+        if (value < node.getVal()) {
             node.setLeft(delete(node.getLeft(), value));
-        } else if (value > node.getData()) {
+        } else if (value > node.getVal()) {
             node.setRight(delete(node.getRight(), value));
         } else {
             // Case 1: Node has no left child
@@ -72,10 +80,10 @@ public class BinaryTree {
             // Case 3: Node has two children
             else {
                 // Get the smallest value in the right of the subtree
-                node.setData(node.getRight().min());
+                node.setVal(node.getRight().min());
 
                 // Delete the successor node
-                node.setRight(delete(node.getRight(), node.getData()));
+                node.setRight(delete(node.getRight(), node.getVal()));
             }
         }
 

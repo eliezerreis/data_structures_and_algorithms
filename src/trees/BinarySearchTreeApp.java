@@ -4,19 +4,10 @@ import trees.util.BinaryTree;
 
 public class BinarySearchTreeApp {
 
-    public BinaryTree create(int[] nums) {
-        BinaryTree tree = new BinaryTree();
-        for (int i = 0; i < nums.length; i++) {
-            tree.insert(nums[i]);
-        }
-        return tree;
-    }
-
     public static void main(String[] args) {
-        BinarySearchTreeApp binaryTree = new BinarySearchTreeApp();
         var nums = new int[]{20, 35, -15, 7, 55, -22, 1};
 
-        BinaryTree tree = binaryTree.create(nums);
+        BinaryTree tree = BinaryTree.createTree(nums);
         tree.transverseInOrder();
 
         System.out.println();

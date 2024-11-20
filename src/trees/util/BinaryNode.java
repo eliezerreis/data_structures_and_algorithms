@@ -1,20 +1,19 @@
 package trees.util;
 
 public class BinaryNode {
-    private int data;
-    private BinaryNode right;
-    private BinaryNode left;
+    public int val;
+    public BinaryNode right;
+    public BinaryNode left;
 
-    public BinaryNode(int data) {
-        this.data = data;
+    public BinaryNode(int val) {
+        this.val = val;
     }
 
-
     public void insert(int value) {
-        if (value == data)
+        if (value == val)
             return;
 
-        if (value < data) {
+        if (value < val) {
             if (left == null)
                 left = new BinaryNode(value);
             else
@@ -32,14 +31,14 @@ public class BinaryNode {
         if (left != null)
             left.transverseInOrder();
 
-        System.out.print(data + " ");
+        System.out.print(val + " ");
 
         if (right != null)
             right.transverseInOrder();
     }
 
     public void transversePreOrder() {
-        System.out.print(data + " ");
+        System.out.print(val + " ");
         if (left != null)
             left.transversePreOrder();
         if (right != null)
@@ -51,13 +50,13 @@ public class BinaryNode {
             left.transversePreOrder();
         if (right != null)
             right.transversePreOrder();
-        System.out.print(data + " ");
+        System.out.print(val + " ");
     }
 
     public BinaryNode get(int value) {
-        if (data == value) return this;
+        if (val == value) return this;
 
-        if (value < data) {
+        if (value < val) {
             if (left != null) return left.get(value);
         } else {
             if (right != null) return right.get(value);
@@ -67,27 +66,27 @@ public class BinaryNode {
     }
 
     public int min() {
-        if (left == null) return data;
+        if (left == null) return val;
         else return left.min();
     }
 
     public int max() {
-        if (right == null) return data;
+        if (right == null) return val;
         else return right.max();
     }
 
     @Override
     public String toString() {
-        return "BinaryNode{" + "data=" + data + '}';
+        return String.valueOf(val);
     }
 
 
-    public int getData() {
-        return data;
+    public int getVal() {
+        return val;
     }
 
-    public void setData(int data) {
-        this.data = data;
+    public void setVal(int val) {
+        this.val = val;
     }
 
     public BinaryNode getRight() {
